@@ -1,0 +1,42 @@
+# .dockerignore for the car-insurance-recommendation-frontend
+
+# Node.js dependency directory
+# Installed in the build stage, no need to copy from host.
+node_modules
+
+# Build artifacts directory
+# Generated in the build stage and explicitly copied to the runtime stage,
+# No need to copy from host to container.
+dist
+build
+
+# Environment variable files
+# May contain sensitive information and should not be included in the image.
+.env
+
+# Git related files
+.git
+.gitignore
+
+# Log files
+npm-debug.log*
+*.log
+
+# Test related files and directories
+# Tests are typically run in a CI/CD pipeline and are not needed in the final image.
+*.test.js
+src/**/*.test.js
+test/
+__tests__/
+coverage/
+# Editor/IDE related files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker related files themselves
+# Used during build, but no need to copy into image.
+Dockerfile
+# nginx.conf ← This line has been deleted
+.dockerignore
