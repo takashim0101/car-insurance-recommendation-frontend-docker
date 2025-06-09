@@ -6,7 +6,7 @@ plugins: [react()],
 server: {
 proxy: {
 '/chat': {
-target: 'http://localhost:3000', // Backend server address
+target: '/chat', // Backend server address
 changeOrigin: true,
 },
 },
